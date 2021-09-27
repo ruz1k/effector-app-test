@@ -13,4 +13,4 @@ const List = <T,>(
   );
 };
 
-export default memo(List);
+export const ListRender = memo(List) as typeof List;

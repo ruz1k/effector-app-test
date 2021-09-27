@@ -14,7 +14,7 @@ declare type ListFuncProps<T> = {
 };
 
 declare type ListProps = {
-  item: { id?: number; language?: string };
+  item: { id: number; language: string };
   //   item1: number;
   //   item2: string;
 };

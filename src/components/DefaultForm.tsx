@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 import { Form } from "antd";
 
 const DefaultForm = <T,>(
@@ -17,9 +17,9 @@ const DefaultForm = <T,>(
       <Form.Item name="language">
         <input />
       </Form.Item>
-      <button />
+      <button>OK</button>
     </Form>
   );
 };
 
-export default memo(DefaultForm);
+export const FormDefault = memo(DefaultForm) as typeof DefaultForm;
