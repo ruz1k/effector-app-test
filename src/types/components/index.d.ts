@@ -1,20 +1,18 @@
 declare type DefaultFormProps<T> = {
-  title: T;
+  title: string;
   onSubmit: (value: T) => void;
 };
 
 declare type FormProps = {
-  title: string;
-  onSubmit: (value: object) => void;
+  id: number;
+  language: string;
 };
 
 declare type ListFuncProps<T> = {
-  item1: T;
-  item2: T;
+  objectProps: {
+    item1: T;
+    item2: T;
+  };
 };
 
-declare type ListProps = {
-  item: { id: number; language: string };
-  //   item1: number;
-  //   item2: string;
-};
+declare type ListProps = string | number;

@@ -8,8 +8,8 @@ export const fetchUserReposFx = createEffect(async ({ name }: Effect) => {
   return req.json();
 });
 
-export const addToList = createEvent<object>();
+export const addToList = createEvent<{ id: number; language: string }>();
 
-export const $store = createStore<Array<object>>([])
+export const $store = createStore<Array<{ id: number; language: string }>>([])
   .on(fetchUserReposFx?.doneData, (_, item) => item)
   .on(addToList, (state, item) => [...state, item]);
